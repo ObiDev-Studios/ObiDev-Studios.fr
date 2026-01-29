@@ -5,7 +5,8 @@
     "category": "plugin",
     "description": "Plugin de test.",
     "commands": ["/test1 help", "/test1 on", "/test1 off"],
-    "content": ["Fonction A", "Fonction B", "Config YAML"]
+    "content": ["Fonction A", "Fonction B", "Config YAML"],
+    "link": "#"
   },
   {
     "id": "test2",
@@ -13,7 +14,8 @@
     "category": "addon",
     "description": "Addon de test.",
     "commands": ["/test2 give", "/test2 reload"],
-    "content": ["Items custom", "Recettes", "Loot tables"]
+    "content": ["Items custom", "Recettes", "Loot tables"],
+    "link": "#"
   },
   {
     "id": "test3",
@@ -21,6 +23,7 @@
     "category": "model3d",
     "description": "Model 3D de test.",
     "commands": ["(Aucune commande)"],
-    "content": ["Fichier .glb/.fbx", "Textures", "Préviews"]
+    "content": ["Fichier .glb/.fbx", "Textures", "Préviews"],
+    "link": "#"
   }
 ]
