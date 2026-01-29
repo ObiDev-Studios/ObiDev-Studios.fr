@@ -1,6 +1,8 @@
 const cardsEl = document.querySelector("#cards");
 const tabs = [...document.querySelectorAll(".tab")];
 const searchInput = document.querySelector("#search");
+const modal = document.querySelector("#modal");
+const modalBody = document.querySelector("#modalBody");
 
 let allProjects = [];
 let activeFilter = "all";
@@ -20,6 +22,41 @@ const escapeHtml = (s) =>
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&#039;");
 
+function openModal(project){
+  const badgeClass = project.category;
+  modalBody.innerHTML = `
+    <div class="modalHeader">
+      <div class="modalTitleGroup">
+        <img src="${escapeHtml(project.icon)}" alt="${escapeHtml(project.title)}" class="modalIcon" />
+        <div>
+          <h2>${escapeHtml(project.title)}</h2>
+          <span class="badge ${escapeHtml(badgeClass)}">${escapeHtml(categoryLabel(project.category))}</span>
+        </div>
+      </div>
+    </div>
+    <p class="modalDesc">${escapeHtml(project.description)}</p>
+
+    <div class="block">
+      <div class="blockHeader">Commandes</div>
+      <div class="blockBody mono">
+        ${(project.commands || []).map(c => `• ${escapeHtml(c)}`).join("<br>")}
+      </div>
+    </div>
+
+    <div class="block">
+      <div class="blockHeader">Contenu</div>
+      <div class="blockBody">
+        ${(project.content || []).map(x => `• ${escapeHtml(x)}`).join("<br>")}
+      </div>
+    </div>
+  `;
+  modal.classList.add("is-open");
+}
+
+function closeModal(){
+  modal.classList.remove("is-open");
+}
+
 function render(list){
   if (!list.length){
     cardsEl.innerHTML = `<div class="card"><p class="desc">Aucun projet ne correspond.</p></div>`;
@@ -28,9 +65,11 @@ function render(list){
 
   cardsEl.innerHTML = list.map(p => {
     const badgeClass = p.category;
-    const href = p.link || "#";
     return `
-      <a class="card" data-category="${escapeHtml(p.category)}" href="${escapeHtml(href)}" target="_blank" rel="noreferrer">
+      <div class="card" onclick="openModal(${escapeHtml(JSON.stringify(p))})">
+        <div class="cardIcon">
+          <img src="${escapeHtml(p.icon)}" alt="${escapeHtml(p.title)}" />
+        </div>
         <div class="cardTop">
           <div>
             <h3>${escapeHtml(p.title)}</h3>
@@ -38,21 +77,10 @@ function render(list){
           </div>
           <span class="badge ${escapeHtml(badgeClass)}">${escapeHtml(categoryLabel(p.category))}</span>
         </div>
-
-        <div class="block">
-          <div class="blockHeader">Commandes</div>
-          <div class="blockBody mono">
-            ${(p.commands || []).map(c => `• ${escapeHtml(c)}`).join("<br>")}
-          </div>
+        <div class="cardFooter">
+          Clique pour en savoir plus
         </div>
-
-        <div class="block">
-          <div class="blockHeader">Contenu</div>
-          <div class="blockBody">
-            ${(p.content || []).map(x => `• ${escapeHtml(x)}`).join("<br>")}
-          </div>
-        </div>
-      </a>
+      </article>
     `;
   }).join("");
 }
@@ -81,6 +109,10 @@ tabs.forEach(btn => {
 
 searchInput.addEventListener("input", applyFilters);
 
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) closeModal();
+});
+
 fetch("assets/data/projects.json")
   .then(r => r.json())
   .then(data => {
@@ -90,3 +122,4 @@ fetch("assets/data/projects.json")
   .catch(() => {
     cardsEl.innerHTML = `<div class="card"><p class="desc">Erreur: impossible de charger projects.json</p></div>`;
   });
+
