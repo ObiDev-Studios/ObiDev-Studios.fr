@@ -137,6 +137,6 @@ function setTheme(theme){
   }
 }
 
-// Charger le thème au démarrage (défaut = light)
-const savedTheme = localStorage.getItem('theme') || 'light';
+// Charger le thème au démarrage (défaut = dark)
+const savedTheme = localStorage.getItem('theme') || 'dark';
 setTheme(savedTheme);
