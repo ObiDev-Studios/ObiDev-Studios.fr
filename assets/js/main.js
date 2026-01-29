@@ -122,3 +122,21 @@ fetch("assets/data/projects.json")
   .catch(() => {
     cardsEl.innerHTML = `<div class="card"><p class="desc">Erreur: impossible de charger projects.json</p></div>`;
   });
+
+// THEME SWITCHER
+function setTheme(theme){
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+  
+  document.querySelectorAll('.pill').forEach(btn => btn.classList.remove('pill-accent'));
+  
+  if(theme === 'light'){
+    document.getElementById('themeLight').classList.add('pill-accent');
+  } else {
+    document.getElementById('themeDark').classList.add('pill-accent');
+  }
+}
+
+// Charger le thème au démarrage (défaut = light)
+const savedTheme = localStorage.getItem('theme') || 'light';
+setTheme(savedTheme);
