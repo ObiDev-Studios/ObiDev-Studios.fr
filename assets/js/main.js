@@ -8,7 +8,7 @@ let activeFilter = "all";
 const categoryLabel = (cat) => {
   if (cat === "plugin") return "Plugin";
   if (cat === "addon") return "Addon";
-  if (cat === "model3d") return "Model (3D)";
+  if (cat === "model3d") return "Models";
   return cat;
 };
 
@@ -28,8 +28,9 @@ function render(list){
 
   cardsEl.innerHTML = list.map(p => {
     const badgeClass = p.category;
+    const href = p.link || "#";
     return `
-      <article class="card" data-category="${escapeHtml(p.category)}">
+      <a class="card" data-category="${escapeHtml(p.category)}" href="${escapeHtml(href)}" target="_blank" rel="noreferrer">
         <div class="cardTop">
           <div>
             <h3>${escapeHtml(p.title)}</h3>
@@ -51,7 +52,7 @@ function render(list){
             ${(p.content || []).map(x => `• ${escapeHtml(x)}`).join("<br>")}
           </div>
         </div>
-      </article>
+      </a>
     `;
   }).join("");
 }
