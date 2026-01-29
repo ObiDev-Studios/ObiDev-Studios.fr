@@ -1,1 +1,55 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio — Plugins / Addons / Models</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="logo">OW</div>
+      <div class="brandText">
+        <div class="brandTitle">Omniworlds</div>
+        <div class="brandSubtitle">Plugins • Addons • Models 3D</div>
+      </div>
+    </div>
 
+    <nav class="tabs" aria-label="Catégories">
+      <button class="tab is-active" data-filter="all">Tout</button>
+      <button class="tab" data-filter="plugin">Plugin</button>
+      <button class="tab" data-filter="addon">Addon</button>
+      <button class="tab" data-filter="model3d">Model (3D)</button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Mes créations</h1>
+      <p>Catalogue pro pour présenter mes projets avec commandes et contenu.</p>
+      <div class="heroMeta">
+        <span class="pill">Dark UI</span>
+        <span class="pill pill-accent">Accents jaunes</span>
+        <span class="pill">Mobile-ready</span>
+      </div>
+    </section>
+
+    <section class="gridHeader">
+      <h2 id="resultsTitle">Projets</h2>
+      <div class="searchBox">
+        <input id="search" type="search" placeholder="Rechercher (ex: Test 2, /test1)..." />
+      </div>
+    </section>
+
+    <section id="cards" class="grid" aria-live="polite"></section>
+
+    <footer class="footer">
+      <span>© Omniworlds</span>
+      <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+    </footer>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
