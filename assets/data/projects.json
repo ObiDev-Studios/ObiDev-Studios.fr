@@ -26,7 +26,7 @@
     "description": "Model 3D de test.",
     "icon": "assets/img/logo.png",
     "commands": ["(Aucune commande)"],
-    "content": ["Fichier .glb/.fbx", "Textures", "Préviews"],
+    "content": ["Fichier .glb/.fbx", "Textures", "Previews"],
     "link": "#"
   }
 ]
