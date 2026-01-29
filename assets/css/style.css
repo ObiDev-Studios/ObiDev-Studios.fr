@@ -37,7 +37,14 @@ body{
   gap: 16px;
 }
 
-.brand{ display:flex; align-items:center; gap: 12px; }
+.brand{ 
+  display:flex; 
+  align-items:center; 
+  gap: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
 .logo{
   width: 40px;
   height: 40px;
@@ -130,9 +137,8 @@ body{
   padding: 14px;
   transition: transform .12s ease, box-shadow .12s ease, border-color .12s ease;
   cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 .card:hover{
   transform: translateY(-3px) scale(1.01);
@@ -143,7 +149,24 @@ body{
   .card{ grid-column: span 6; }
 }
 
-.cardTop{ display:flex; align-items:flex-start; justify-content:space-between; gap: 12px; }
+.cardIcon{
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: rgba(255,201,72,.1);
+  border: 1px solid rgba(255,201,72,.3);
+  display: grid;
+  place-items: center;
+  margin-bottom: 12px;
+  overflow: hidden;
+}
+.cardIcon img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardTop{ display:flex; align-items:flex-start; justify-content:space-between; gap: 12px; flex: 1; }
 .card h3{ margin:0; font-size: 18px; }
 .badge{
   font-size: 12px;
@@ -159,6 +182,15 @@ body{
 .badge.model3d{ border-color: rgba(255,201,72,.45); color: var(--accent2); background: rgba(255,201,72,.06); }
 
 .desc{ margin: 8px 0 0; color: var(--muted); }
+
+.cardFooter{
+  margin-top: auto;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,.08);
+  font-size: 12px;
+  color: var(--accent2);
+  font-weight: 500;
+}
 
 .block{
   margin-top: 12px;
@@ -189,6 +221,83 @@ body{
 .footer a{ color: var(--accent2); text-decoration:none; }
 .footer a:hover{ text-decoration: underline; }
 
+/* MODAL */
+.modal{
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,.8);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+.modal.is-open{
+  display: flex;
+}
+
+.modalContent{
+  background: linear-gradient(180deg, rgba(15,27,46,.98), rgba(12,23,40,.98));
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  max-width: 600px;
+  width: 90%;
+  max-height: 80vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 60px rgba(0,0,0,.8);
+  position: relative;
+}
+
+.modalClose{
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid var(--border);
+  color: var(--text);
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 20px;
+  display: grid;
+  place-items: center;
+  transition: background .2s ease;
+}
+.modalClose:hover{
+  background: rgba(255,255,255,.2);
+}
+
+.modalHeader{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.modalTitleGroup{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.modalIcon{
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: cover;
+  border: 2px solid rgba(255,201,72,.3);
+}
+
+.modalDesc{
+  color: var(--muted);
+  margin: 0 0 16px 0;
+  line-height: 1.5;
+}
+
 @media (max-width: 560px){
   .topbar{ padding: 12px 12px; }
   .brandTitle{ font-size: 14px; }
@@ -199,4 +308,9 @@ body{
 
   .searchBox input{ width: 100%; }
   .gridHeader{ flex-direction: column; align-items: stretch; }
+
+  .modalContent{
+    width: 95%;
+    padding: 18px;
+  }
 }
