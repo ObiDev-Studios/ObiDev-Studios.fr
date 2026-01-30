@@ -13,7 +13,7 @@
     "id": "omnimod",
     "title": "OmniMod",
     "category": "plugin",
-    "description": "Suite complète d'outils de modération",
+    "description": "System complet d'outils de modération",
     "icon": "assets/img/logo.png",
     "commands": ["/sos", "/s", "/vanish", "/fly", "/invsee <joueur>", "/invclear <joueur>", "/freeze <joueur>", "/tp <joueur>", "/tphere <joueur>", "/tpall", "/fly", "/speedon", "/speedoff", "/annonce <message>"],
     "content": ["/sos - Le joueur tape `/sos` et les modérateurs/op sont alerté (JOUEUR)",
