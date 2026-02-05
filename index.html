@@ -3,55 +3,74 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Portfolio Omniworlds</title>
+  <title>ObiDev — Plugins EndStone</title>
   <link rel="stylesheet" href="assets/css/style.css" />
+
+  <!-- (Optionnel) favicon : mets un favicon.ico à la racine du repo -->
+  <!-- <link rel="icon" href="/favicon.ico" type="image/x-icon"> -->
 </head>
+
 <body>
   <header class="topbar">
     <a href="#" class="brand" onclick="closeModal(); return false;">
       <div class="logo">
-        <img src="assets/img/logo.png" alt="Omniworlds" />
+        <img src="assets/img/logo.png" alt="ObiDev" />
       </div>
       <div class="brandText">
-        <div class="brandTitle">Omniworlds</div>
-        <div class="brandSubtitle">Plugins • Addons • Models</div>
+        <div class="brandTitle">ObiDev</div>
+        <div class="brandSubtitle">Plugins Minecraft • EndStone</div>
       </div>
     </a>
 
-    <nav class="tabs" aria-label="Catégories">
-      <button class="tab is-active" data-filter="all">Tout</button>
-      <button class="tab" data-filter="plugin">Plugin</button>
-      <button class="tab" data-filter="addon">Addon</button>
-      <button class="tab" data-filter="model3d">Models</button>
+    <!-- Remplace les anciens onglets par le switch thème + lien Projets -->
+    <nav class="tabs" aria-label="Navigation et thème">
+      <button class="tab" id="themeLightTop" onclick="setTheme('light')">White</button>
+      <button class="tab is-active" id="themeDarkTop" onclick="setTheme('dark')">Dark</button>
+      <a class="tab tab-link" href="projects.html">Projets</a>
     </nav>
   </header>
 
   <main class="container">
     <section class="hero">
-      <h1>Portfolio</h1>
-      <p>Voici le portfolio actuel Omniworlds</p>
+      <h1>ObiDev</h1>
+      <p>
+        Studio indépendant : plugins Minecraft. Pour le moment, les projets sont principalement développés pour EndStone.
+      </p>
+
       <div class="heroMeta">
-        <button class="pill" id="themeLight" onclick="setTheme('light')">White</button>
-        <button class="pill pill-accent" id="themeDark" onclick="setTheme('dark')">Dark</button>
+        <a class="pill pill-accent" href="projects.html">Voir les projets</a>
+        <a class="pill" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
       </div>
     </section>
 
-    <section class="gridHeader">
-      <h2 id="resultsTitle">Projets</h2>
-      <div class="searchBox">
-        <input id="search" type="search" placeholder="Rechercher..." />
-      </div>
+    <!-- Petite vitrine (sans grid/cards ici) -->
+    <section class="gridHeader" aria-label="Infos">
+      <h2>À propos</h2>
     </section>
 
-    <section id="cards" class="grid" aria-live="polite"></section>
+    <section class="card" style="cursor:default">
+      <div class="cardTop" style="align-items:center">
+        <div>
+          <h3 style="margin:0">Plugins EndStone</h3>
+          <p class="desc" style="margin:8px 0 0">
+            Je publie des projets et outils liés à mes serveurs et à mes expérimentations dev. La liste complète est sur la page Projets.
+          </p>
+        </div>
+        <span class="badge plugin">EndStone</span>
+      </div>
+
+      <div class="cardFooter">
+        <a href="projects.html" class="mono">→ Accéder à la page projets</a>
+      </div>
+    </section>
 
     <footer class="footer">
-      <span>© Omniworlds</span>
+      <span>© ObiDev Studios</span>
       <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
     </footer>
   </main>
 
-  <!-- MODAL -->
+  <!-- On garde le modal même si la home ne l’utilise plus : inoffensif -->
   <div id="modal" class="modal">
     <div class="modalContent">
       <button class="modalClose" onclick="closeModal()">&times;</button>
