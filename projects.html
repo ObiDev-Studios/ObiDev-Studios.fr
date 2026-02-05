@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="fr" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ObiDev — Projets</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html" class="brand" onclick="closeModal(); return false;">
+      <div class="logo">
+        <img src="assets/img/logo.png" alt="ObiDev" />
+      </div>
+      <div class="brandText">
+        <div class="brandTitle">ObiDev</div>
+        <div class="brandSubtitle">Projets • Plugins • EndStone</div>
+      </div>
+    </a>
+
+    <nav class="tabs" aria-label="Catégories">
+      <button class="tab is-active" data-filter="all">Tout</button>
+      <button class="tab" data-filter="plugin">Plugin</button>
+      <button class="tab" data-filter="addon">Addon</button>
+      <button class="tab" data-filter="model3d">Models</button>
+
+      <span style="width:10px"></span>
+
+      <button class="tab" id="themeLightTop" onclick="setTheme('light')">White</button>
+      <button class="tab is-active" id="themeDarkTop" onclick="setTheme('dark')">Dark</button>
+
+      <a class="tab tab-link" href="index.html">Accueil</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Projets</h1>
+      <p>Cartes + détails. Un bouton Download est disponible dans chaque fiche.</p>
+    </section>
+
+    <section class="gridHeader">
+      <h2 id="resultsTitle">Liste</h2>
+      <div class="searchBox">
+        <input id="search" type="search" placeholder="Rechercher..." />
+      </div>
+    </section>
+
+    <section id="cards" class="grid" aria-live="polite"></section>
+
+    <footer class="footer">
+      <span>© ObiDev Studios</span>
+      <a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+    </footer>
+  </main>
+
+  <div id="modal" class="modal">
+    <div class="modalContent">
+      <button class="modalClose" onclick="closeModal()">&times;</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
