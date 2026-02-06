@@ -143,7 +143,7 @@ if (modal) {
   });
 }
 
-// THEME SWITCHER (topbar)
+
 function syncThemeButtons(theme) {
   const lightTop = document.getElementById("themeLightTop");
   const darkTop = document.getElementById("themeDarkTop");
@@ -167,6 +167,6 @@ function setTheme(theme){
   syncThemeButtons(theme);
 }
 
-// Charger le thème au démarrage (défaut = dark)
+
 const savedTheme = localStorage.getItem("theme") || "dark";
 setTheme(savedTheme);
