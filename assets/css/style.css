@@ -385,17 +385,17 @@ body{
 
 /* === PAGE D'ACCUEIL === */
 
-/* Grand logo centré avec lueur - ESPACE RÉDUIT */
+/* Grand logo centré avec lueur - ESPACE MINIMAL */
 .heroLogo{
   text-align: center;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .bigLogo{
   width: 540px;
   height: 540px;
-  margin: 0 auto 2px;
+  margin: 0 auto 0;
   filter: drop-shadow(0 0 50px rgba(135,206,235,.6)) 
           drop-shadow(0 0 80px rgba(135,206,235,.4));
   display: inline-block;
