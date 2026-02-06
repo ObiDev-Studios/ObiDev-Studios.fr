@@ -439,9 +439,6 @@ text-align: center;
 }
 }
 
-
-
-
 .heroLogo{
 text-align: center;
 margin-top: 0;
@@ -472,8 +469,21 @@ color: var(--accent);
 text-align: center;
 }
 
+.sectionTitle{
+font-size: 64px;
+font-weight: 900;
+margin: 0;
+color: var(--accent);
+text-align: center;
+}
 
 .featuredSection{
+margin-top: 30px;
+margin-bottom: 20px;
+text-align: center;
+}
+
+.sectionSubtitle{
 margin-top: 30px;
 margin-bottom: 20px;
 text-align: center;
