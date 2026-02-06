@@ -273,9 +273,9 @@ body{
 .mono{ font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 13px; }
 
 .footer{
-  margin-top: 32px;
+  margin-top: 16px;
   margin-bottom: 40px;
-  padding-top: 14px;
+  padding-top: 10px;
   padding-bottom: 20px;
   border-top: 1px solid var(--border);
   display:flex;
@@ -384,7 +384,7 @@ body{
 
 /* === PAGE D'ACCUEIL === */
 
-/* Grand logo centré avec lueur (x3 = 270px) */
+/* Grand logo centré avec lueur (x2) */
 .heroLogo{
   text-align: center;
   margin-top: 50px;
@@ -392,9 +392,9 @@ body{
 }
 
 .bigLogo{
-  width: 270px;
-  height: 270px;
-  margin: 0 auto 16px;
+  width: 540px;
+  height: 540px;
+  margin: 0 auto 8px;
   filter: drop-shadow(0 0 50px rgba(135,206,235,.6)) 
           drop-shadow(0 0 80px rgba(135,206,235,.4));
   display: inline-block;
@@ -415,7 +415,7 @@ body{
   text-align: center;
 }
 
-/* Section Projets à la Une (cases x1.5) */
+/* Section Projets à la Une */
 .featuredSection{
   margin-top: 50px;
   margin-bottom: 50px;
@@ -489,6 +489,13 @@ body{
   line-height: 1.5;
 }
 
+/* Bouton voir tous les projets */
+.see-all-button{
+  display:inline-block;
+  font-size:16px;
+  padding:10px 20px;
+}
+
 /* Panneau Discord en bas */
 .discordPanel{
   background: var(--panel);
@@ -541,8 +548,8 @@ body{
 /* Responsive */
 @media (max-width: 768px){
   .bigLogo{
-    width: 150px;
-    height: 150px;
+    width: 220px;
+    height: 220px;
   }
 
   .bigTitle{
