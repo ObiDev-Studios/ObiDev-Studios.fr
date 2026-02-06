@@ -532,7 +532,32 @@ padding:14px 28px;
 margin-top: 30px;
 }
 
-/* ===== SECTION SIMPLICITÉ ===== */
+.accesSection {
+  padding: 70px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.titleWrapper {
+  margin-bottom: 40px;
+}
+
+.accesTitle {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text);
+  margin: 0 0 10px 0;
+}
+
+.accesSubtitle {
+  font-size: 16px;
+  color: var(--muted);
+  margin: 0 0 40px 0;
+}
+
 
 .simpleSection {
   padding: 70px 20px;
