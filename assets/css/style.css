@@ -56,20 +56,9 @@ display:flex;
 flex-direction:column;
 }
 
-
-.simpleSection {
-padding: 60px 20px;
-text-align: center;
-max-width: 1200px;
-margin: 60px auto 40px;
-}
-
 .titleWrapper {
 margin-bottom: 40px;
 }
-
-
-
 
 .topbar{
 position: sticky;
