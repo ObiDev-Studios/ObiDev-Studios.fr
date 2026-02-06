@@ -419,7 +419,6 @@ body{
 
 .bigLogo{
   width: 540px;
-  height: 540px;
   margin: 0 auto 0;
   filter: drop-shadow(0 0 50px rgba(135,206,235,.6)) 
           drop-shadow(0 0 80px rgba(135,206,235,.4));
