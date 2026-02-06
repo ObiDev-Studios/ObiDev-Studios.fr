@@ -23,10 +23,9 @@
 }
 
 [data-theme="light"] body{
-  background: radial-gradient(2000px 1200px at 20% 0%, rgba(135,206,235,.06), transparent 60%),
-              radial-gradient(1800px 1200px at 90% 10%, rgba(200,220,255,.08), transparent 55%),
+  background: radial-gradient(1200px 600px at 20% 0%, rgba(135,206,235,.06), transparent 60%),
+              radial-gradient(900px 600px at 90% 10%, rgba(200,220,255,.08), transparent 55%),
               linear-gradient(135deg, #fafbfc 0%, #f5f7fa 50%, #f0f2f5 100%);
-  background-repeat: no-repeat;
 }
 
 *{ box-sizing:border-box; }
@@ -55,6 +54,65 @@ body{
   margin: 22px auto 0;
   display:flex;
   flex-direction:column;
+}
+
+/* === SECTION SIMPLICITÉ CENTRÉE === */
+.simpleSection {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1200px;
+  margin: 60px auto 40px;
+}
+
+.titleWrapper {
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: 42px;
+  font-weight: 900;
+  margin: 0 0 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text);
+}
+
+.sectionSubtitle {
+  font-size: 16px;
+  color: var(--muted);
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.simpleGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.simpleCard {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: var(--shadow);
+  transition: all .3s ease;
+  text-align: center;
+}
+
+.simpleCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 50px rgba(0,0,0,.3);
+  border-color: rgba(135,206,235,.4);
+}
+
+.simpleCard h4 {
+  margin: 0 0 16px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text);
 }
 
 /* TOPBAR */
@@ -419,6 +477,7 @@ body{
 
 .bigLogo{
   width: 540px;
+  /* height: 540px; SUPPRIMÉ pour garder les proportions */
   margin: 0 auto 0;
   filter: drop-shadow(0 0 50px rgba(135,206,235,.6)) 
           drop-shadow(0 0 80px rgba(135,206,235,.4));
@@ -427,7 +486,7 @@ body{
 
 .bigLogo img{
   width: 100%;
-  height: 100%;
+  height: auto; /* garde les proportions */
   object-fit: contain;
   display: block;
 }
@@ -575,7 +634,6 @@ body{
 @media (max-width: 768px){
   .bigLogo{
     width: 220px;
-    height: 220px;
   }
 
   .bigTitle{
