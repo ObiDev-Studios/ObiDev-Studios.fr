@@ -310,7 +310,7 @@ body {
 }
 .parallax-break {
   height: 320px; /* ajuste la hauteur comme tu veux */
-  background-image: url("assets/img/obidev-parallax.jpg"); /* ton image */
+  background-image: url("assets/img/parallax-code.png"); /* ton image */
   background-attachment: fixed;   /* effet parallax basique */
   background-position: center;
   background-repeat: no-repeat;
