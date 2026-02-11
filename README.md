@@ -1,6 +1,6 @@
 <!-- ObiDev Studios Banner -->
 <p align="center">
-  <img src="https://obidev.fr/assets/img/logo.png" alt="ObiDev Studios Logo" width="120" />
+  <img src="https://www.obidev-studios.fr/assets/img/logo.png" alt="ObiDev Studios Logo" width="120" />
 </p>
 
 <h1 align="center">ObiDev Studios</h1>
@@ -8,7 +8,7 @@
 <p align="center">
   <b>Plugins Minecraft open-source</b> • Made in France 🇫🇷
   <br />
-  <a href="https://obidev.fr" target="_blank"><strong>→ Voir le site live</strong></a>
+  <a href="https://www.obidev-studios.fr/" target="_blank"><strong>→ Voir le site live</strong></a>
 </p>
 
 <p align="center">
@@ -19,7 +19,7 @@
 
 ---
 
-##À propos
+##  À propos
 
 **ObiDev Studios** est un projet de développement de plugins open-source pour **Minecraft Bedrock Edition** via l'API **Endstone**. Nous créons des solutions robustes et performantes pour les serveurs Minecraft.
 
@@ -39,5 +39,5 @@
 
 <div align="center">
   <img src="assets/img/screenshots/desktop.png" width="48%" />
-  <img src="assets/img/screenshots/desktopcard.png" width="48%" />
+
 </div>
