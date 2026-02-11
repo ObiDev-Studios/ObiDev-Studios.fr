@@ -38,6 +38,6 @@
 ##  Aperçu du site
 
 <div align="center">
-  <img src="assets/img/screenshots/desktop.png" width="48%" />
+  <img src="assets/img/desktop.png" width="48%" />
 
 </div>
