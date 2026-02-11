@@ -1,29 +1,6 @@
 /* ===== © 2026 ObiDev Studios ===== */
 
-// --- GESTION DU THÈME ---
-function setTheme(theme) {
-    const body = document.body;
-    const btnDark = document.getElementById('themeDarkTop');
-    const btnLight = document.getElementById('themeLightTop');
 
-    if (theme === 'light') {
-        body.classList.add('light-mode');
-        btnLight.classList.add('is-active');
-        btnDark.classList.remove('is-active');
-        localStorage.setItem('theme', 'light');
-    } else {
-        body.classList.remove('light-mode');
-        btnDark.classList.add('is-active');
-        btnLight.classList.remove('is-active');
-        localStorage.setItem('theme', 'dark');
-    }
-}
-
-
-window.addEventListener('load', () => {
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    setTheme(savedTheme);
-});
 
 
 
