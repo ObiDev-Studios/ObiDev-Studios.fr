@@ -44,21 +44,22 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // FAQ accordion
-  const faqItems = document.querySelectorAll('.faq-item');
-  faqItems.forEach(item => {
-    const button = item.querySelector('.faq-question');
-    if (!button) return;
+const faqItems = document.querySelectorAll('.faq-item');
+faqItems.forEach(item => {
+  const header = item.querySelector('.faq-header'); // ← changé de .faq-question
+  if (!header) return;
 
-    button.addEventListener('click', () => {
-      const isActive = item.classList.contains('active');
+  header.addEventListener('click', () => {
+    const isActive = item.classList.contains('active');
 
-      faqItems.forEach(i => i.classList.remove('active'));
+    faqItems.forEach(i => i.classList.remove('active'));
 
-      if (!isActive) {
-        item.classList.add('active');
-      }
-    });
+    if (!isActive) {
+      item.classList.add('active');
+    }
   });
+});
+
 
   // CARDS + MODAL
   const cards = document.querySelectorAll(".plugin-card");
