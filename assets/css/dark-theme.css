@@ -275,7 +275,7 @@ body {
   }
 
   .hero-grid {
-    flex-direction: container;
+  flex-direction: column;
     text-align: center;
   }
 
@@ -852,5 +852,28 @@ body {
     flex-wrap: wrap;
     justify-content: center;
   }
+}
+
+
+
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
+  .navbar-container { flex-direction: column; gap: 12px; padding: 12px 20px; }
+  .navbar-menu { gap: 16px; }
+  .hero { padding: 60px 0 100px; }
+  .hero-grid { flex-direction: column !important; gap: 40px; }
+  .hero-text { margin-top: 0; text-align: center; max-width: 100%; }
+  .hero-text h1 { font-size: 28px; line-height: 1.2; }
+  .hero-logo { height: 200px; }
+  .plugins-grid { flex-direction: column; align-items: center; gap: 24px; }
+  .faq-section { padding: 60px 0; }
+  .footer-content { flex-direction: column; text-align: center; }
+}
+
+
+@media (max-width: 480px) {
+  .container { padding: 0 16px; }
+  .hero-text h1 { font-size: 24px; }
+  .section-title { font-size: 20px; }
 }
 /* ===== © 2026 ObiDev Studios ===== */
