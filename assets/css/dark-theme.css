@@ -857,6 +857,36 @@ body {
 
 
 /* ===== MOBILE ===== */
+/* ===== SUPPRIME BARRES BLANCHES MOBILE ===== */
+html {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  height: 100vh;
+  overflow: auto;
+  margin: 0 !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+@media (max-width: 768px) {
+  html, body {
+    padding: 0 !important;
+    margin: 0 !important;
+    height: 100vh !important;
+  }
+  
+  /* Force le body à prendre toute la hauteur */
+  body::before,
+  body::after {
+    display: none !important;
+  }
+}
+
+
+
 @media (max-width: 768px) {
   /* ❌ CACHE NAVBAR COMPLÈTE */
   .header,
