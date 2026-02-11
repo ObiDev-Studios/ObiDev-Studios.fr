@@ -15,67 +15,55 @@ html {
 
 
 /* ===== Fond ===== */
-/* Fond Principal Profond */
-body {
-    background-color: #050a14; /* Bleu nuit très sombre, presque noir */
-    color: #ffffff;
-    position: relative;
-    overflow-x: hidden; /* Important pour ne pas avoir de scrollbar à cause des orbes */
-    min-height: 100vh;
+body { 
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+    color: #f9fafb; 
+    background: radial-gradient(circle at top, #111827 0%, #020617 55%); 
+    background-attachment: fixed;
+    background-repeat: no-repeat; 
+    background-size: cover;
+    position: relative; /* Nécessaire pour les lueurs */
+    overflow-x: hidden;
 }
 
-/* Les Orbes Lumineux (Glow Effects) */
-.glow-effect {
-    position: fixed;
-    border-radius: 50%;
-    filter: blur(100px); /* Le flou qui fait tout le style "diffus" */
-    z-index: -1; /* Derrière tout le contenu */
-    animation: float 10s infinite ease-in-out;
-    opacity: 0.6; /* Subtil, pas agressif */
-}
-
-/* Orbe 1 : Bleu Cyan (ObiDev) - Haut Gauche */
+/* LES LUEURS SUBTILES (nouveau) */
 .glow-1 {
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, #23a6d5 0%, rgba(35, 166, 213, 0) 70%);
-    top: -150px;
-    left: -150px;
-    animation-delay: 0s;
+    position: fixed;
+    top: 20vh;
+    left: 20vw;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(35, 166, 213, 0.3) 0%, transparent 60%);
+    border-radius: 50%;
+    filter: blur(60px);
+    z-index: -1;
+    animation: float1 20s infinite ease-in-out;
 }
 
-/* Orbe 2 : Bleu Profond/Violet - Bas Droite */
 .glow-2 {
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(circle, #3a86ff 0%, rgba(58, 134, 255, 0) 70%);
-    bottom: -200px;
-    right: -200px;
-    animation-delay: 5s; /* Décalage pour mouvement organique */
+    position: fixed;
+    bottom: 20vh;
+    right: 15vw;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(58, 134, 255, 0.25) 0%, transparent 60%);
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: -1;
+    animation: float2 25s infinite ease-in-out;
 }
 
-/* Animation de flottement lent */
-@keyframes float {
-    0% { transform: translate(0, 0) scale(1); }
-    33% { transform: translate(30px, -50px) scale(1.1); }
-    66% { transform: translate(-20px, 20px) scale(0.9); }
-    100% { transform: translate(0, 0) scale(1); }
+/* Animations lentes et fluides */
+@keyframes float1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(20px, -10px) scale(1.05); }
+    66% { transform: translate(-10px, 15px) scale(0.95); }
 }
 
-/* Ajustement Navbar pour qu'elle soit transparente/glassmorphism */
-.navbar {
-    background: rgba(5, 10, 20, 0.7) !important; /* Semi-transparent */
-    backdrop-filter: blur(10px); /* Effet verre dépoli */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+@keyframes float2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(-15px, 20px) scale(1.1); }
 }
-
-/* Ajustement Cartes pour qu'elles ressortent */
-.card {
-    background: rgba(20, 25, 40, 0.8); /* Plus clair que le fond */
-    border: 1px solid rgba(255, 255, 255, 0.1); /* Bordure subtile */
-    backdrop-filter: blur(5px);
-}
-
 
 
 
