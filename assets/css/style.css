@@ -546,6 +546,7 @@ body {
   gap: 16px;
   align-items: flex-start;
   margin-bottom: 18px;
+  padding-right: 40px;
 }
 
 .plugin-modal-title {
