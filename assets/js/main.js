@@ -134,5 +134,31 @@ faqItems.forEach(item => {
 
 
 
+// === GESTION THÈME (AJOUT UNIQUEMENT) ===
+
+function setTheme(theme) {
+    const stylesheet = document.getElementById('theme-stylesheet');
+    const btnDark = document.getElementById('themeDarkTop');
+    const btnLight = document.getElementById('themeLightTop');
+    
+    if (theme === 'light') {
+        stylesheet.href = 'assets/css/light-theme.css?v=' + Date.now();
+        btnLight.classList.add('is-active');
+        btnDark.classList.remove('is-active');
+        localStorage.setItem('theme', 'light');
+    } else {
+        stylesheet.href = 'assets/css/dark-theme.css?v=' + Date.now();
+        btnDark.classList.add('is-active');
+        btnLight.classList.remove('is-active');
+        localStorage.setItem('theme', 'dark');
+    }
+}
+
+// Chargement du thème sauvegardé
+document.addEventListener('DOMContentLoaded', function() {
+    const savedTheme = localStorage.getItem('theme') || 'dark';
+    setTheme(savedTheme);
+});
+
 
 /* ===== © 2026 ObiDev Studios ===== */
