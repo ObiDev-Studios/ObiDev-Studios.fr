@@ -161,42 +161,4 @@ faqItems.forEach(item => {
   });
 });
 
-
-
-// === GESTION THÈME DARK/LIGHT === 
-
-document.addEventListener('DOMContentLoaded', () => {
-    const themeBtns = document.querySelectorAll('.theme-btn');
-    const body = document.body;
-    
-    function applyTheme(themeName) {
-        if (themeName === 'light') {
-            body.classList.add('light-mode');
-        } else {
-            body.classList.remove('light-mode');
-        }
-        
-        themeBtns.forEach(btn => {
-            if(btn.dataset.theme === themeName) {
-                btn.classList.add('active');
-            } else {
-                btn.classList.remove('active');
-            }
-        });
-
-        localStorage.setItem('theme', themeName);
-    }
-
-    themeBtns.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            applyTheme(btn.dataset.theme);
-        });
-    });
-
-    // Chargement du thème sauvegardé
-    const savedTheme = localStorage.getItem('theme') || 'dark';
-    applyTheme(savedTheme);
-});
-
 /* ===== © 2026 ObiDev Studios ===== */
