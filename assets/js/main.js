@@ -1,18 +1,24 @@
 /* ===== © 2026 ObiDev Studios ===== */
 
 document.addEventListener("DOMContentLoaded", () => {
-  // === NAVIGATION ===
-  const navLinks = document.querySelectorAll('a[href^="#"]');
-  navLinks.forEach(link => {
-    link.addEventListener('click', event => {
-      const targetId = link.getAttribute('href');
-      if (!targetId || targetId === '#') return;
-      const target = document.querySelector(targetId);
-      if (!target) return;
-      event.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  function initNavLinks() {
+    const navLinks = document.querySelectorAll('a[href^="#"]');
+    navLinks.forEach(link => {
+      link.removeEventListener('click', handleNavClick);
+      link.addEventListener('click', handleNavClick);
     });
-  });
+  }
+
+  function handleNavClick(event) {
+    const targetId = this.getAttribute('href');
+    if (!targetId || targetId === '#') return;
+    const target = document.querySelector(targetId);
+    if (!target) return;
+    event.preventDefault();
+    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  initNavLinks();
 
   // === FAQ ===
   function initFAQ() {
@@ -20,18 +26,18 @@ document.addEventListener("DOMContentLoaded", () => {
     faqItems.forEach(item => {
       const header = item.querySelector('.faq-header'); 
       if (!header) return;
-      
 
-      header.replaceWith(header.cloneNode(true));
-      const newHeader = item.querySelector('.faq-header');
-      
-      newHeader.addEventListener('click', () => {
-        const isActive = item.classList.contains('active');
-        faqItems.forEach(i => i.classList.remove('active'));
-        if (!isActive) {
-          item.classList.add('active');
-        }
-      });
+      const existingHandler = header._faqHandler;
+      if (!existingHandler) {
+        header._faqHandler = () => {
+          const isActive = item.classList.contains('active');
+          faqItems.forEach(i => i.classList.remove('active'));
+          if (!isActive) {
+            item.classList.add('active');
+          }
+        };
+        header.addEventListener('click', header._faqHandler);
+      }
     });
   }
 
