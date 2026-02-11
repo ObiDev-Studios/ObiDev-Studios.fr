@@ -228,7 +228,7 @@ body * {
     transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-body.light-mode .navbar {
+body.light-mode .navbar-container {
     background: rgba(255, 255, 255, 0.98) !important;
     backdrop-filter: blur(20px) !important;
     border-bottom: 1px solid #e5e7eb !important;
@@ -261,7 +261,9 @@ body.light-mode .plugin-card * {
 body.light-mode .container {
     color: #1f2937 !important;
 }
-
+body.light-mode.plugin-icon {
+ background: rgba(255, 255, 255, 0.98) !important;
+  }
 body.light-mode {
     background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%) !important;
 }
