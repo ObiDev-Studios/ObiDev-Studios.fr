@@ -8,7 +8,7 @@
 <p align="center">
   <b>Voici le Site ObiDev Studios</b> • Made in France 🇫🇷
   <br />
-  <a href="https://www.obidev-studios.fr/" target="_blank"><strong>→ Voir le site live</strong></a>
+  <a href="https://www.obidev-studios.fr/" target="_blank"><strong>→ Voir le site </strong></a>
 </p>
 
 ---
