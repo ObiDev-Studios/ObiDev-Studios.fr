@@ -15,7 +15,7 @@
 
 ##  About
 
-**ObiDev Studios** is a multiple development project that aims to create an image by developing any type of thing.
+**ObiDev Studios** is a multiple development project that aims to create development projects of any type.
 
 ---
 
