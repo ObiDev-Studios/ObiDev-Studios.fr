@@ -4,7 +4,8 @@
 
   
 <head>
-  
+
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <link rel="stylesheet" href="assets/css/dark-theme.css" id="theme-stylesheet">
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -83,6 +84,8 @@
       </div>
       <div class="hero-visual">
         <div class="hero-logo-overlay">
+          <model-viewer src="ton-logo.glb" alt="Logo Obidev 3D" auto-rotate camera-controls ar shadow-intensity="1" style="width: 300px; height: 300px;">
+</model-viewer>
           <img src="assets/img/logoettexte.png" alt="ObiDev" class="hero-logo">
         </div>
       </div>
