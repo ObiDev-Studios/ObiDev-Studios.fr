@@ -6,35 +6,34 @@
 <h1 align="center">ObiDev Studios</h1>
 
 <p align="center">
-  <b>Voici le Site ObiDev Studios</b> • Made in France 🇫🇷
+  <b>Here is the site ObiDev Studios</b> • Made in France 🇫🇷
   <br />
-  <a href="https://www.obidev-studios.fr/" target="_blank"><strong>→ Voir le site </strong></a>
+  <a href="https://www.obidev-studios.fr/" target="_blank"><strong>→ Visit the website </strong></a>
 </p>
 
 ---
 
-##  À propos
+##  About
 
-**ObiDev Studios** est un projet de développement de plugins open-source pour **Minecraft Bedrock Edition** via l'API **Endstone**. Nous créons des solutions robustes et performantes pour les serveurs Minecraft.
-
----
-
-##  Fonctionnalités
-
-- **Thème clair/sombre** - Basculer instantanément entre les modes
-- **Design clean** - Interface épurée et moderne
-- **Animations fluides** - Interactions smooth 
-- **Architecture modulaire** - Plugins facilement modifiable
+**ObiDev Studios** is a multiple development project that aims to create an image by developing any type of thing.
 
 ---
 
-##  En Développement
+##  Features
 
-Le site est encore en développement, merci d'être indulgent et n'hésitez pas à nous faire parvenir vos critiques.
+- **Light/dark theme** - Instantly toggle between modes
+- **Clean design** - Sleek and modern interface
+- **Fluid animations** - Smooth interactions 
 
 ---
 
-##  Aperçu du site
+##  In development
+
+The site is still under development, thank you for being lenient and do not hesitate to send us your reviews.
+
+---
+
+##  site preview
 
 <div align="center">
   <img src="assets/img/desktop.png" width="48%" />
